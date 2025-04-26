@@ -50,6 +50,7 @@ body {
     margin: 0 auto;
     text-align: center;
     box-sizing: border-box;
+    overflow-x: hidden;
   }
   
   .slide {
@@ -59,6 +60,9 @@ body {
     width: 100%;
     opacity: 0;
     transition: opacity 0.5s ease;
+    max-width: 100%;
+    height: auto;
+    display: block;
   }
   
   .slide img {
