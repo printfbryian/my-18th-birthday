@@ -45,10 +45,11 @@ body {
   
   .slideshow-container {
     position: relative;
-    max-width: 600px;
+    max-width: 100%;
     width: 100%;
     margin: 0 auto;
     text-align: center;
+    box-sizing: border-box;
   }
   
   .slide {
