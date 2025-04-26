@@ -19,7 +19,7 @@ body {
   .first-section {
     position: relative;
     height: 100vh;
-    background: url('bg final_page-0001.jpg') center/cover no-repeat;
+    background: url('images/bg final_page-0001.jpg') center/cover no-repeat;
   }
   
   .overlay {
