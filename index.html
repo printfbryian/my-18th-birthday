@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bryian's birthday</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- First Section -->
+  <section class="first-section">
+    <div class="overlay">It's My Birthday!</div>
+  </section>
+
+  <!-- Second Section: Slideshow -->
+  <section class="second-section">
+    <div class="slideshow-container">
+      <div class="slide active">
+        <img src="images/1.jpg" alt="Slide 1" />
+      </div>
+      <div class="slide">
+        <img src="images/2.jpg" alt="Slide 2" />
+      </div>
+      <div class="slide">
+        <img src="images/3.jpg" alt="Slide 3" />
+      </div>
+      <div class="slide">
+        <img src="images/4.jpg" alt="Slide 4" />
+      </div>
+      <div class="slide">
+        <img src="images/5.jpg" alt="Slide 5" />
+      </div>
+      <div class="slide">
+        <img src="images/6 r.jpg" alt="Slide 6" />
+      </div>
+      <div class="slide">
+        <img src="images/btw 5 6.jpg" alt="Slide 7" />
+      </div>
+      <button id="next-slide">Next</button>
+    </div>
+  </section>
+
+  <!-- Final Section -->
+  <section class="final-section">
+    <h2>Thank you!</h2>
+    <p>i'd love to hear all your birthday wishes</p>
+    <a
+      href="https://wa.me/254113339606?text=Happy%20Birthday!%20"
+      target="_blank"
+      class="whatsapp-button"
+    >
+      Send via WhatsApp
+    </a>
+  </section>
+
+  <script>
+    const slides = document.querySelectorAll(".slide");
+    const nextButton = document.getElementById("next-slide");
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+        slide.style.opacity = 0;
+      });
+      slides[index].classList.add("active");
+      slides[index].style.opacity = 1;
+    }
+
+    nextButton.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    });
+
+    
+    slides.forEach(slide => (slide.style.transition = "opacity 0.5s ease"));
+    showSlide(currentIndex);
+  </script>
+</body>
+</html>
